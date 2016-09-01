@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac1</title>
+		<script type='text/javascript' src='jquery-2.2.3.js'</script>
+	</head>
+	<body>
+		<canvas id="area" width="100" height="100">Tu navegador no soporta canvas u.y</canvas>
+		<script>
+			var miCanvas=document.getElementById("area");
+			var ctx=miCanvas.getContext("2d");
+			$(window).resize(function()
+			{
+				var ancho=$(window).innerWidth();
+				var largo=$(window).innerHeight();
+				miCanvas.width=ancho;
+				miCanvas.height=largo;
+				console.log("El ancho del canvas es "+miCanvas.width+" y el ancho de la ventana es "+window.innerWidth);
+				console.log("El alto del canvas es "+miCAnvas.height+" y el alto de la ventana es "+window.innerHeight);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<body>
+	<img src="img_lamp.jpg" id="lamp">
+
+	<button onclick="dibuja('repeat')">Llena</button> 
+	<button onclick="dibuja('repeat-x')">Llena horizontal</button> 
+	<button onclick="dibuja('repeat-y')">Llena vertical</button> 
+	<button onclick="dibuja('no-repeat')">Limpia</button>     
+
+	<canvas id="myCanvas" width="290" height="300">Tu navegador no soporta Canvas u.y</canvas>
+
+	<script>
+
+		function dibuja(direction)
+		{
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.clearRect(0, 0, c.width, c.height); 
+			var img = document.getElementById("lamp");
+			var pat = ctx.createPattern(img, direction);
+			ctx.rect(0, 0, 290, 300);
+			ctx.fillStyle = pat;
+			ctx.fill();
+		};
+
+	</script>
+	</body>
+</html>

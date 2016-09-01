@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Prac2</title>
+		<script src='jquery-2.2.3.js'></script>
+	</head>
+	<body>
+		<canvas id="area" width="700" height="500">Tu navegador no soporta canvas u.y</canvas>
+		<script>
+			var img1=new Image();
+			var img2=new Image();
+			img1.src="http://www.fondos7.net/wallpaper-original/wallpapers/paisaje-de-flores-rosas-5775.jpg";
+			img2.src="http://www.elbartolo.cl/1/images/549ad5899.jpg";
+			$(document).ready(function()
+			{
+				var miCanvas=document.getElementById("area");
+				var ctx=miCanvas.getContext("2d");
+				ctx.drawImage(img1,0,0,300,200);
+				ctx.drawImage(img2,400,450,100,60,400,0,300,200);
+				ctx.font="10px Arial";
+				ctx.strokeText("I have to find you, tell you I need you",10,10);
+				ctx.strokeText("Nobody said it was easy...",410,170);
+			});
+		</script>
+	</body>
+</html>

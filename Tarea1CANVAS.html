@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Tarea1</title>
+		<script src='jquery-2.2.3.js'></script>
+	</head>
+	<body>
+		<canvas id="area" width="500" height="500">Tu navegador no soporta canvas u.y</canvas>
+		<script>
+			var miCanvas=document.getElementById("area");
+			var ctx=miCanvas.getContext("2d");
+			var Jhonson=new Image();
+			var Fondo=new Image();
+			Jhonson.src="Halo.png";
+			Fondo.src="Fondo.jpg";
+			ctx.drawImage(Fondo,0,0,485,402,0,0,500,500);
+			setInterval(function()
+			{
+				ctx.drawImage(Jhonson,0,0,25,43,100,205,40,65);
+				ctx.clearRect(100,205,40,65);
+				ctx.drawImage(Jhonson,30,0,25,43,100,205,40,65);
+				ctx.clearRect(100,205,40,65);
+				ctx.drawImage(Jhonson,60,0,30,43,100,205,45,65);
+				ctx.clearRect(100,205,45,65);
+				ctx.drawImage(Jhonson,130,0,30,43,100,205,45,65);
+			},1000);
+		</script>
+	</body>
+</html>
